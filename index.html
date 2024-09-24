@@ -3,56 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .container input {
-            display: block;
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .container button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .container button:hover {
-            background-color: #0056b3;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-    </style>
+    <title>Personal Book Library</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Age Calculator</h1>
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob">
-        <button onclick="calculateAge()">Calculate Age</button>
-        <div class="result" id="result"></div>
-    </div>
+    <header>
+        <h1>Personal Book Library</h1>
+    </header>
 
-    <script src="script.js"></script>
+    <!-- Add Book Section -->
+    <section id="add-book">
+        <h2>Add a New Book</h2>
+        <form id="book-form">
+            <input type="text" id="title" placeholder="Book Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <button type="submit">Add Book</button>
+        </form>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search-books">
+        <h2>Search Books</h2>
+        <input type="text" id="search-input" placeholder="Search by Title or Author">
+        <button id="search-button">Search</button>
+    </section>
+
+    <!-- Book List Section -->
+    <section id="book-list-section">
+        <h2>Book List</h2>
+        <ul id="book-list"></ul>
+    </section>
+
+    <!-- Borrowing History Section -->
+    <section id="borrow-history">
+        <h2>Borrowing History</h2>
+        <ul id="history-list"></ul>
+    </section>
+
+    <script src="app.js"></script>
 </body>
 </html>
